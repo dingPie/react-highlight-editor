@@ -1,15 +1,21 @@
 {
-  "name": "react-highlight-editor",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@ding-pie/react-highlight-editor",
+  "description": "React 환경에서 컴포넌트로 제어 가능한 editable container 입니다. 여러 하이라이트를 손쉽게 제어할 수 있습니다.",
+  "version": "0.0.1",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "browser": "./browser/specific/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
+    "@types/lodash-es": "^4.17.12",
     "@types/node": "^16.18.112",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
+    "lodash-es": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -20,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "rm -rf dist && mkdir dist && tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +46,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "keywords": [
+    "editor",
+    "tag",
+    "highlight"
+  ],
+  "author": "dingPie",
+  "repository": {
+    "type": "git"
   }
 }
