@@ -90,7 +90,7 @@ export declare const useReactHighlightEditor: ({ componentStyleProps, highlightS
     /**
      * 외부에서 editable container에 아이템 추가를 위한 핸들러
      */
-    handleClickAddIndexItem: ({ text, styleKey, spanProperty, }: {
+    addHighlightSpan: ({ text, styleKey, spanProperty, }: {
         text: string;
         styleKey?: string | undefined;
         spanProperty?: Partial<Pick<HTMLSpanElement, "accessKey" | "autocapitalize" | "className" | "dir" | "draggable" | "hidden" | "id" | "lang" | "spellcheck" | "tabIndex" | "title" | "translate">> | undefined;

@@ -78,7 +78,7 @@ export var useReactHighlightEditor = function (_a) {
     /**
      * 외부에서 editable container에 아이템 추가를 위한 핸들러
      */
-    var handleClickAddIndexItem = useCallback(function (_a) {
+    var addHighlightSpan = useCallback(function (_a) {
         var _b, _c, _d, _e;
         var text = _a.text, _f = _a.styleKey, styleKey = _f === void 0 ? "base" : _f, spanProperty = _a.spanProperty;
         if (!domRef.current)
@@ -146,6 +146,6 @@ export var useReactHighlightEditor = function (_a) {
         /**
          * 외부에서 editable container에 아이템 추가를 위한 핸들러
          */
-        handleClickAddIndexItem: handleClickAddIndexItem,
+        addHighlightSpan: addHighlightSpan,
     };
 };

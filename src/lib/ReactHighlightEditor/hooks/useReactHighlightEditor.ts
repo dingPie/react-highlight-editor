@@ -102,7 +102,7 @@ export const useReactHighlightEditor = ({
   /**
    * 외부에서 editable container에 아이템 추가를 위한 핸들러
    */
-  const handleClickAddIndexItem = useCallback(
+  const addHighlightSpan = useCallback(
     ({
       text,
       styleKey = "base",
@@ -184,6 +184,6 @@ export const useReactHighlightEditor = ({
     /**
      * 외부에서 editable container에 아이템 추가를 위한 핸들러
      */
-    handleClickAddIndexItem,
+    addHighlightSpan,
   };
 };
