@@ -144,7 +144,7 @@ export const useReactHighlightEditor = ({
         range.insertNode(trailingSpace);
       } else {
         domRef.current?.appendChild(newSpan);
-        domRef.current?.appendChild(trailingSpace);
+        domRef.current?.appendChild(space);
       }
       const newLineNum = domRef.current.offsetHeight / baseLineHeight;
       setLineNum(newLineNum);
