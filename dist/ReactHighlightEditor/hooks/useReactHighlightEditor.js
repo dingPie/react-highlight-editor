@@ -109,7 +109,7 @@ export var useReactHighlightEditor = function (_a) {
         }
         else {
             (_d = domRef.current) === null || _d === void 0 ? void 0 : _d.appendChild(newSpan);
-            (_e = domRef.current) === null || _e === void 0 ? void 0 : _e.appendChild(trailingSpace);
+            (_e = domRef.current) === null || _e === void 0 ? void 0 : _e.appendChild(space);
         }
         var newLineNum = domRef.current.offsetHeight / baseLineHeight;
         setLineNum(newLineNum);
