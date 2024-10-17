@@ -9,7 +9,10 @@ import {
 import { moveCursorToEnd } from "../utils/move-cursor-to-end";
 
 interface useReactHighlightEditorProps {
-  componentStyleProps?: typeof defaultComponentStyle;
+  componentStyleProps?: Record<
+    keyof typeof defaultComponentStyle,
+    CSSProperties
+  >;
   highlightStyleProps?: Record<string, CSSProperties>;
 }
 
@@ -53,7 +56,7 @@ export const useReactHighlightEditor = ({
   }, [highlightStyle]);
 
   const baseLineHeight =
-    parseInt(componentStyle.baseText?.lineHeight, 10) ?? 22;
+    parseInt(componentStyle.baseText?.lineHeight?.toString() ?? "0", 10) ?? 22;
 
   /**
    * 커서 위치 저장을 위한 핸들러
