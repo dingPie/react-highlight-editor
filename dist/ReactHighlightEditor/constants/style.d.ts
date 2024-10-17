@@ -3,7 +3,6 @@ export declare const defaultComponentStyle: {
     container: {
         display: string;
         backgroundColor: string;
-        flexShrink: number;
         width: string;
         height: string;
         overflowY: string;

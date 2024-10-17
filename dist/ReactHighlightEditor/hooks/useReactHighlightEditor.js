@@ -14,11 +14,11 @@ import { kebabCase } from "lodash-es";
 import { defaultComponentStyle, defaultHighlightStyle, } from "../constants/style";
 import { moveCursorToEnd } from "../utils/move-cursor-to-end";
 export var useReactHighlightEditor = function (_a) {
-    var _b, _c;
+    var _b, _c, _d, _e;
     var componentStyleProps = _a.componentStyleProps, highlightStyleProps = _a.highlightStyleProps;
     var domRef = useRef(null);
     var rangeRef = useRef(undefined);
-    var _d = useState(1), lineNum = _d[0], setLineNum = _d[1];
+    var _f = useState(1), lineNum = _f[0], setLineNum = _f[1];
     var componentStyle = useMemo(function () {
         return __assign(__assign({}, defaultComponentStyle), componentStyleProps);
     }, [componentStyleProps]);
@@ -35,7 +35,7 @@ export var useReactHighlightEditor = function (_a) {
         }
         return result;
     }, [highlightStyle]);
-    var baseLineHeight = (_c = parseInt((_b = componentStyle.baseText) === null || _b === void 0 ? void 0 : _b.lineHeight, 10)) !== null && _c !== void 0 ? _c : 22;
+    var baseLineHeight = (_e = parseInt((_d = (_c = (_b = componentStyle.baseText) === null || _b === void 0 ? void 0 : _b.lineHeight) === null || _c === void 0 ? void 0 : _c.toString()) !== null && _d !== void 0 ? _d : "0", 10)) !== null && _e !== void 0 ? _e : 22;
     /**
      * 커서 위치 저장을 위한 핸들러
      */

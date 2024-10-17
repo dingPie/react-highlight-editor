@@ -2,7 +2,6 @@ export var defaultComponentStyle = {
     container: {
         display: "flex",
         backgroundColor: "white",
-        flexShrink: 0,
         width: "100%",
         height: "100%",
         overflowY: "scroll",

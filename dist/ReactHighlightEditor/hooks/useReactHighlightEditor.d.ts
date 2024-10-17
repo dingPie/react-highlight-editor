@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { defaultComponentStyle } from "../constants/style";
 interface useReactHighlightEditorProps {
-    componentStyleProps?: typeof defaultComponentStyle;
+    componentStyleProps?: Record<keyof typeof defaultComponentStyle, CSSProperties>;
     highlightStyleProps?: Record<string, CSSProperties>;
 }
 export declare const useReactHighlightEditor: ({ componentStyleProps, highlightStyleProps, }: useReactHighlightEditorProps) => {
@@ -24,19 +24,18 @@ export declare const useReactHighlightEditor: ({ componentStyleProps, highlightS
         container: {
             display: string;
             backgroundColor: string;
-            flexShrink: number;
             width: string;
             height: string;
             overflowY: string;
             borderWidth: string;
             borderColor: string;
             borderRadius: string;
-        };
+        } | CSSProperties;
         baseText: {
             fontFamily: string;
             fontSize: string;
             lineHeight: string;
-        };
+        } | CSSProperties;
         lineContainer: {
             display: string;
             flexDirection: string;
@@ -46,7 +45,7 @@ export declare const useReactHighlightEditor: ({ componentStyleProps, highlightS
             height: string;
             minHeight: string;
             backgroundColor: string;
-        };
+        } | CSSProperties;
         lineItemBox: {
             display: string;
             justifyContent: string;
@@ -54,26 +53,26 @@ export declare const useReactHighlightEditor: ({ componentStyleProps, highlightS
             width: string;
             padding: string;
             backgroundColor: string;
-        };
+        } | CSSProperties;
         lineItemText: {
             fontFamily: string;
             fontSize: string;
             fontWeight: number;
             color: string;
-        };
+        } | CSSProperties;
         editorOuter: {
             height: string;
             width: string;
             margin: string;
             padding: string;
-        };
+        } | CSSProperties;
         editorInner: {
             width: string;
             height: string;
-        };
+        } | CSSProperties;
         "editorInner:focus": {
             outline: string;
-        };
+        } | CSSProperties;
     };
     /**
      * 커서 위치 저장을 위한 핸들러
@@ -93,7 +92,7 @@ export declare const useReactHighlightEditor: ({ componentStyleProps, highlightS
     addHighlightSpan: ({ text, styleKey, spanProperty, }: {
         text: string;
         styleKey?: string | undefined;
-        spanProperty?: Partial<Pick<HTMLSpanElement, "accessKey" | "autocapitalize" | "className" | "dir" | "draggable" | "hidden" | "id" | "lang" | "spellcheck" | "tabIndex" | "title" | "translate">> | undefined;
+        spanProperty?: Partial<Pick<HTMLSpanElement, "hidden" | "accessKey" | "autocapitalize" | "className" | "dir" | "draggable" | "id" | "lang" | "spellcheck" | "tabIndex" | "title" | "translate">> | undefined;
     }) => void;
 };
 export {};
