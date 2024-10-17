@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { defaultComponentStyle } from "../constants/style";
 interface useReactHighlightEditorProps {
-    componentStyleProps?: Record<keyof typeof defaultComponentStyle, CSSProperties>;
+    componentStyleProps?: Partial<Record<keyof typeof defaultComponentStyle, CSSProperties>>;
     highlightStyleProps?: Record<string, CSSProperties>;
 }
 export declare const useReactHighlightEditor: ({ componentStyleProps, highlightStyleProps, }: useReactHighlightEditorProps) => {

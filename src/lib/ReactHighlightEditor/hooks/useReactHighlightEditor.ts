@@ -9,9 +9,8 @@ import {
 import { moveCursorToEnd } from "../utils/move-cursor-to-end";
 
 interface useReactHighlightEditorProps {
-  componentStyleProps?: Record<
-    keyof typeof defaultComponentStyle,
-    CSSProperties
+  componentStyleProps?: Partial<
+    Record<keyof typeof defaultComponentStyle, CSSProperties>
   >;
   highlightStyleProps?: Record<string, CSSProperties>;
 }

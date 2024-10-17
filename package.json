@@ -1,7 +1,7 @@
 {
   "name": "react-highlight-editor",
   "description": "React 환경에서 컴포넌트로 제어 가능한 editable container 입니다. 여러 하이라이트를 손쉽게 제어할 수 있습니다.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
