@@ -9,6 +9,7 @@ export declare const defaultComponentStyle: {
         borderWidth: string;
         borderColor: string;
         borderRadius: string;
+        scrollbarWidth: string;
     };
     baseText: {
         fontFamily: string;

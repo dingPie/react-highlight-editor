@@ -8,6 +8,7 @@ export var defaultComponentStyle = {
         borderWidth: "1px",
         borderColor: "#d1d5d9",
         borderRadius: "8px",
+        scrollbarWidth: "none",
     },
     baseText: {
         fontFamily: "Pretendard Variable",

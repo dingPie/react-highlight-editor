@@ -63,6 +63,7 @@ export const useReactHighlightEditor = ({
         ...lineItemText,
         ...componentStyleProps?.lineItemText,
       },
+      "editorInner:focus": defaultComponentStyle["editorInner:focus"],
     };
   }, [componentStyleProps]);
 

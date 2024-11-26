@@ -20,7 +20,17 @@ export var useReactHighlightEditor = function (_a) {
     var rangeRef = useRef(undefined);
     var _f = useState(1), lineNum = _f[0], setLineNum = _f[1];
     var componentStyle = useMemo(function () {
-        return __assign(__assign({}, defaultComponentStyle), componentStyleProps);
+        var baseText = defaultComponentStyle.baseText, container = defaultComponentStyle.container, editorOuter = defaultComponentStyle.editorOuter, editorInner = defaultComponentStyle.editorInner, lineContainer = defaultComponentStyle.lineContainer, lineItemBox = defaultComponentStyle.lineItemBox, lineItemText = defaultComponentStyle.lineItemText;
+        return {
+            container: __assign(__assign({}, container), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.container),
+            baseText: __assign(__assign({}, baseText), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.baseText),
+            editorOuter: __assign(__assign({}, editorOuter), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.editorOuter),
+            editorInner: __assign(__assign({}, editorInner), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.editorInner),
+            lineContainer: __assign(__assign({}, lineContainer), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.lineContainer),
+            lineItemBox: __assign(__assign({}, lineItemBox), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.lineItemBox),
+            lineItemText: __assign(__assign({}, lineItemText), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.lineItemText),
+            "editorInner:focus": defaultComponentStyle["editorInner:focus"],
+        };
     }, [componentStyleProps]);
     var highlightStyle = useMemo(function () { return (__assign(__assign({}, defaultHighlightStyle), highlightStyleProps)); }, [highlightStyleProps]);
     var cssTextObj = useMemo(function () {
