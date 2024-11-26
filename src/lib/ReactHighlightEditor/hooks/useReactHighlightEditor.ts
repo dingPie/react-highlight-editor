@@ -25,9 +25,44 @@ export const useReactHighlightEditor = ({
   const [lineNum, setLineNum] = useState(1);
 
   const componentStyle = useMemo(() => {
+    const {
+      baseText,
+      container,
+      editorOuter,
+      editorInner,
+      lineContainer,
+      lineItemBox,
+      lineItemText,
+    } = defaultComponentStyle;
     return {
-      ...defaultComponentStyle,
-      ...componentStyleProps,
+      container: {
+        ...container,
+        ...componentStyleProps?.container,
+      },
+      baseText: {
+        ...baseText,
+        ...componentStyleProps?.baseText,
+      },
+      editorOuter: {
+        ...editorOuter,
+        ...componentStyleProps?.editorOuter,
+      },
+      editorInner: {
+        ...editorInner,
+        ...componentStyleProps?.editorInner,
+      },
+      lineContainer: {
+        ...lineContainer,
+        ...componentStyleProps?.lineContainer,
+      },
+      lineItemBox: {
+        ...lineItemBox,
+        ...componentStyleProps?.lineItemBox,
+      },
+      lineItemText: {
+        ...lineItemText,
+        ...componentStyleProps?.lineItemText,
+      },
     };
   }, [componentStyleProps]);
 
