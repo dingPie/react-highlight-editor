@@ -20,7 +20,7 @@ export var useReactHighlightEditor = function (_a) {
     var rangeRef = useRef(undefined);
     var _f = useState(1), lineNum = _f[0], setLineNum = _f[1];
     var componentStyle = useMemo(function () {
-        var baseText = defaultComponentStyle.baseText, container = defaultComponentStyle.container, editorOuter = defaultComponentStyle.editorOuter, editorInner = defaultComponentStyle.editorInner, lineContainer = defaultComponentStyle.lineContainer, lineItemBox = defaultComponentStyle.lineItemBox, lineItemText = defaultComponentStyle.lineItemText;
+        var _a = defaultComponentStyle, baseText = _a.baseText, container = _a.container, editorOuter = _a.editorOuter, editorInner = _a.editorInner, lineContainer = _a.lineContainer, lineItemBox = _a.lineItemBox, lineItemText = _a.lineItemText;
         return {
             container: __assign(__assign({}, container), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.container),
             baseText: __assign(__assign({}, baseText), componentStyleProps === null || componentStyleProps === void 0 ? void 0 : componentStyleProps.baseText),

@@ -24,7 +24,9 @@ export const useReactHighlightEditor = ({
 
   const [lineNum, setLineNum] = useState(1);
 
-  const componentStyle = useMemo(() => {
+  const componentStyle: Partial<
+    Record<keyof typeof defaultComponentStyle, CSSProperties>
+  > = useMemo(() => {
     const {
       baseText,
       container,
@@ -33,7 +35,7 @@ export const useReactHighlightEditor = ({
       lineContainer,
       lineItemBox,
       lineItemText,
-    } = defaultComponentStyle;
+    } = defaultComponentStyle as Record<string, CSSProperties>;
     return {
       container: {
         ...container,
