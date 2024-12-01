@@ -10,7 +10,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { useCallback, useMemo, useRef, useState } from "react";
-import { kebabCase } from "lodash-es";
+import kebabCase from "lodash-es/kebabCase";
 import { defaultComponentStyle, defaultHighlightStyle, } from "../constants/style";
 import { moveCursorToEnd } from "../utils/move-cursor-to-end";
 export var useReactHighlightEditor = function (_a) {
