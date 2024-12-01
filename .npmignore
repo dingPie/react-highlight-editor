@@ -1,4 +1,14 @@
+# 개발 환경 파일
 node_modules/
 src/
 public/
 tsconfig.json
+
+
+# 개발 설정 파일
+.git/
+.gitignore
+.eslintrc
+.prettierrc
+.vscode/
+.idea/

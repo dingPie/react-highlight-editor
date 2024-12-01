@@ -1,6 +1,6 @@
 import { CSSProperties, useCallback, useMemo, useRef, useState } from "react";
 
-import { kebabCase } from "lodash-es";
+import kebabCase from "lodash-es/kebabCase";
 
 import {
   defaultComponentStyle,
