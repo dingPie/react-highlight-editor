@@ -1,35 +1,35 @@
 {
   "name": "react-highlight-editor",
   "description": "React 환경에서 컴포넌트로 제어 가능한 editable container 입니다. 여러 하이라이트를 손쉽게 제어할 수 있습니다.",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "browser": "./browser/specific/main.js",
   "dependencies": {
-    "lodash-es": "^4.17.21",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^16.18.112",
     "@types/react": "^18.3.10",
-    "@types/react-dom": "^18.3.0"
+    "@types/react-dom": "^18.3.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc && webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "rm -rf dist && mkdir dist && tsc"
+    "prepare": "rm -rf dist && mkdir dist && tsc",
+    "release:major": "npm version major && npm publish --tag latest",
+    "release:minor": "npm version minor && npm publish --tag latest",
+    "release:patch": "npm version patch && npm publish --tag latest"
   },
   "eslintConfig": {
     "extends": [
